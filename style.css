@@ -1,30 +1,33 @@
 * {
   margin: 0;
   padding: 0;
+  background-color: rgb(95, 97, 99);
 }
 
-.black-square {
-  width: 36px;
-  height: 36px;
-  background-color: black;
+.container {
+  /* Primero decimos que la posición será fixed */
+  position: fixed;
+  /* Finalmente pedimos que nos coloque la altura a mitad de pantalla.*/
+  top: 40%;
+  left: 40%;
 }
 
-.mask {
-  background-color: antiquewhite;
-  overflow: hidden;
+.clock {
+  /* Estamos afectando a la clase "clock", no al id "clock", por eso este estilo no se aplica sobre la línea 12, que está comentada. */
+  text-align: center;
+  background-color: rgb(173, 216, 230);
+  padding: 30px;
+  width: 30vw;
+  border-radius: 8px;
+  font-size: 60px;
 }
 
-.moving-box {
-  transform: translateY(-800px);
-  transition: 0.3s ease;
-}
-
-.mask:active .moving-box {
-  transform: translateY(0px);
-  transition: 0.3s ease;
-}
-
-.black-square:active .mask .moving-box {
-  transform: translateY(0px);
-  transition: 0.3s ease;
+.clock:hover {
+  /* Estamos afectando a la clase "clock", no al id "clock", por eso este estilo no se aplica sobre la línea 12, que está comentada. */
+  text-align: center;
+  background-color: rgb(126, 214, 244);
+  padding: 30px;
+  width: 30vw;
+  border-radius: 8px;
+  font-size: 50px;
 }
