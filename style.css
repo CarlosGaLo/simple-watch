@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.black-square {
+  width: 36px;
+  height: 36px;
+  background-color: black;
+}
+
+.mask {
+  background-color: antiquewhite;
+  overflow: hidden;
+}
+
+.moving-box {
+  transform: translateY(-800px);
+  transition: 0.3s ease;
+}
+
+.mask:active .moving-box {
+  transform: translateY(0px);
+  transition: 0.3s ease;
+}
+
+.black-square:active .mask .moving-box {
+  transform: translateY(0px);
+  transition: 0.3s ease;
+}
